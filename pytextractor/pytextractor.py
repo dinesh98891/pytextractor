@@ -28,7 +28,7 @@ class PyTextractor:
                        min_boxes=1,
                        max_iterations=20,
                        **kwargs):
-        loaded_image = self._load_image(image)
+        loaded_image = image
         image, width, height, ratio_width, ratio_height = self._resize_image(
             loaded_image, width, height
         )
