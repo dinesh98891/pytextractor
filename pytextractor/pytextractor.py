@@ -173,7 +173,7 @@ class PyTextractor:
             ROIImage = image.copy()[start_Y:end_Y, start_X:end_X]
             config = '--psm 6' if numbers else ''
             extracted_text.append(pytesseract.image_to_string(
-                ROIImage, config=config)
+                ROIImage, config=config, lang='guj')
             )
             if display:
                 cv2.imshow('SubImage', ROIImage)
